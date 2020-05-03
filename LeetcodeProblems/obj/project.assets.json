@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bahar\\source\\repos\\LeetcodeProblems\\LeetcodeProblems\\LeetcodeProblems.csproj",
+      "projectUniqueName": "C:\\Users\\bahar\\Documents\\GitHub\\LeetCodeChallenges\\LeetcodeProblems\\LeetcodeProblems.csproj",
       "projectName": "LeetcodeProblems",
-      "projectPath": "C:\\Users\\bahar\\source\\repos\\LeetcodeProblems\\LeetcodeProblems\\LeetcodeProblems.csproj",
+      "projectPath": "C:\\Users\\bahar\\Documents\\GitHub\\LeetCodeChallenges\\LeetcodeProblems\\LeetcodeProblems.csproj",
       "packagesPath": "C:\\Users\\bahar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bahar\\source\\repos\\LeetcodeProblems\\LeetcodeProblems\\obj\\",
+      "outputPath": "C:\\Users\\bahar\\Documents\\GitHub\\LeetCodeChallenges\\LeetcodeProblems\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
