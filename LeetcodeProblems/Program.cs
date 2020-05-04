@@ -10,7 +10,8 @@ namespace LeetcodeProblems
             Console.WriteLine("Hello World!");
             //CheckValidString("(*))");
             MayChallenges may = new MayChallenges();
-            var numberOfJ = may.NumJewelsInStones("aA", "aAAbbbb");
+            // var numberOfJ = may.NumJewelsInStones("aA", "aAAbbbb");
+            bool canConstruct = may.CanConstruct("aa", "aab");
         }
         //Given a string containing only three types of characters: '(', ')' and '*', write a function to check whether this string is valid.We define the validity of a string by these rules:
         //Any left parenthesis '(' must have a corresponding right parenthesis ')'.

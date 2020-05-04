@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace LeetcodeProblems
 {
@@ -52,14 +53,47 @@ namespace LeetcodeProblems
             int numberOfJ = 0;
             char[] stones = S.ToCharArray();
             HashSet<char> jewels = new HashSet<char>(J.ToCharArray());
-            foreach(char s in stones)
-            { 
-                if(jewels.Contains(s))
+            foreach (char s in stones)
+            {
+                if (jewels.Contains(s))
                 {
                     numberOfJ++;
                 }
             }
             return numberOfJ;
+        }
+
+        /*
+         Given an arbitrary ransom note string and another string containing letters from all the magazines,
+         write a function that will return true if the ransom note can be constructed from the magazines ; 
+         otherwise, it will return false.
+         Each letter in the magazine string can only be used once in your ransom note.
+         Note: You may assume that both strings contain only lowercase letters. canConstruct("a", "b") -> false, canConstruct("aa", "ab") -> false
+         canConstruct("aa", "aab") -> true
+         */
+        public bool CanConstruct(string ransomNote, string magazine)
+        {
+            Dictionary<char, int> ransomByCount = new Dictionary<char, int>();
+            foreach(char letter in ransomNote)
+            {
+                if (!ransomByCount.ContainsKey(letter))
+                {
+                    ransomByCount.Add(letter, 1);
+                }
+                else
+                {
+                    ransomByCount[letter]++;
+                }
+            }
+            
+            foreach(char letter in magazine)
+            {
+                if(ransomByCount.ContainsKey(letter))
+                {
+                    ransomByCount[letter]--;
+                }
+            }
+            return !ransomByCount.Values.Any(v => v > 0);            
         }
     }
 }

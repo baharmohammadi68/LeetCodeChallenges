@@ -17,7 +17,6 @@ C:\Users\bahar\Documents\GitHub\LeetCodeChallenges\LeetcodeProblems\bin\Debug\ne
 C:\Users\bahar\Documents\GitHub\LeetCodeChallenges\LeetcodeProblems\bin\Debug\netcoreapp3.1\LeetcodeProblems.runtimeconfig.dev.json
 C:\Users\bahar\Documents\GitHub\LeetCodeChallenges\LeetcodeProblems\bin\Debug\netcoreapp3.1\LeetcodeProblems.dll
 C:\Users\bahar\Documents\GitHub\LeetCodeChallenges\LeetcodeProblems\bin\Debug\netcoreapp3.1\LeetcodeProblems.pdb
-C:\Users\bahar\Documents\GitHub\LeetCodeChallenges\LeetcodeProblems\obj\Debug\netcoreapp3.1\LeetcodeProblems.csprojAssemblyReference.cache
 C:\Users\bahar\Documents\GitHub\LeetCodeChallenges\LeetcodeProblems\obj\Debug\netcoreapp3.1\LeetcodeProblems.csproj.CoreCompileInputs.cache
 C:\Users\bahar\Documents\GitHub\LeetCodeChallenges\LeetcodeProblems\obj\Debug\netcoreapp3.1\LeetcodeProblems.AssemblyInfoInputs.cache
 C:\Users\bahar\Documents\GitHub\LeetCodeChallenges\LeetcodeProblems\obj\Debug\netcoreapp3.1\LeetcodeProblems.AssemblyInfo.cs
