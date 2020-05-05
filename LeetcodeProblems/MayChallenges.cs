@@ -74,7 +74,7 @@ namespace LeetcodeProblems
         public bool CanConstruct(string ransomNote, string magazine)
         {
             Dictionary<char, int> ransomByCount = new Dictionary<char, int>();
-            foreach(char letter in ransomNote)
+            foreach (char letter in ransomNote)
             {
                 if (!ransomByCount.ContainsKey(letter))
                 {
@@ -85,15 +85,45 @@ namespace LeetcodeProblems
                     ransomByCount[letter]++;
                 }
             }
-            
-            foreach(char letter in magazine)
+
+            foreach (char letter in magazine)
             {
-                if(ransomByCount.ContainsKey(letter))
+                if (ransomByCount.ContainsKey(letter))
                 {
                     ransomByCount[letter]--;
                 }
             }
-            return !ransomByCount.Values.Any(v => v > 0);            
+            return !ransomByCount.Values.Any(v => v > 0);
+        }
+
+        /*Number complement: 
+         * Given a positive integer, output its complement number. The complement strategy is to flip the bits of its binary representation. */
+        public int FindComplement(int num)
+        {
+            int count = 0;
+
+            int j = num;
+            while (j != 0)
+            {
+                j = j / 2;
+                count++;
+            }
+            int ans = Convert.ToInt32(Math.Pow(2, count) - 1);
+
+            return num ^ ans;
+        }
+
+        public int FindComplementSolutionTwo(int num)
+        {
+            int power = 1;
+            int res = 0;
+            while(num > 0)
+            {
+                res += (num % 2 ^ 1) * power;
+                power <<= 1;
+                num >>= 1;
+            }
+            return res;
         }
     }
 }

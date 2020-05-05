@@ -23,3 +23,4 @@ C:\Users\bahar\Documents\GitHub\LeetCodeChallenges\LeetcodeProblems\obj\Debug\ne
 C:\Users\bahar\Documents\GitHub\LeetCodeChallenges\LeetcodeProblems\obj\Debug\netcoreapp3.1\LeetcodeProblems.dll
 C:\Users\bahar\Documents\GitHub\LeetCodeChallenges\LeetcodeProblems\obj\Debug\netcoreapp3.1\LeetcodeProblems.pdb
 C:\Users\bahar\Documents\GitHub\LeetCodeChallenges\LeetcodeProblems\obj\Debug\netcoreapp3.1\LeetcodeProblems.genruntimeconfig.cache
+C:\Users\bahar\Documents\GitHub\LeetCodeChallenges\LeetcodeProblems\obj\Debug\netcoreapp3.1\LeetcodeProblems.csprojAssemblyReference.cache
