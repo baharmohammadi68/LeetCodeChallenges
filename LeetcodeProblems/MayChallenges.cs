@@ -117,13 +117,32 @@ namespace LeetcodeProblems
         {
             int power = 1;
             int res = 0;
-            while(num > 0)
+            while (num > 0)
             {
                 res += (num % 2 ^ 1) * power;
                 power <<= 1;
                 num >>= 1;
             }
             return res;
+        }
+
+        /*Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.*/
+        public int FirstUniqChar(string s)
+        {
+            Dictionary<char, int> map = new Dictionary<char, int>();
+
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (map.ContainsKey(s[i])) map[s[i]]++;
+                else map.Add(s[i], 1);
+            }
+
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (map[s[i]] == 1) return i;
+            }
+
+            return -1;
         }
     }
 }
