@@ -144,5 +144,38 @@ namespace LeetcodeProblems
 
             return -1;
         }
+
+        /* - Majority element
+
+ */
+        public int MajorityElement(int[] nums)
+        {
+            Dictionary<int, int> map = new Dictionary<int, int>();
+            if(nums.Length == 1)
+            {
+                return nums[0];
+            }    
+
+            foreach(int i in nums)
+            {
+                if(map.ContainsKey(i) && map[i] + 1 > nums.Length / 2)
+                {
+                    return i;
+                }
+                else
+                {
+                    if(map.ContainsKey(i))
+                    { 
+                        map[i]++;
+                    }
+                    else 
+                    {
+                        map.Add(i, 1);                    
+                    }
+                }
+            }
+
+            return -1;
+        }
     }
 }
