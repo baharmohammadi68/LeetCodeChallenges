@@ -151,31 +151,112 @@ namespace LeetcodeProblems
         public int MajorityElement(int[] nums)
         {
             Dictionary<int, int> map = new Dictionary<int, int>();
-            if(nums.Length == 1)
+            if (nums.Length == 1)
             {
                 return nums[0];
-            }    
+            }
 
-            foreach(int i in nums)
+            foreach (int i in nums)
             {
-                if(map.ContainsKey(i) && map[i] + 1 > nums.Length / 2)
+                if (map.ContainsKey(i) && map[i] + 1 > nums.Length / 2)
                 {
                     return i;
                 }
                 else
                 {
-                    if(map.ContainsKey(i))
-                    { 
+                    if (map.ContainsKey(i))
+                    {
                         map[i]++;
                     }
-                    else 
+                    else
                     {
-                        map.Add(i, 1);                    
+                        map.Add(i, 1);
                     }
                 }
             }
 
             return -1;
         }
+        /*
+         Implement Trie (Prefix Tree)
+         Implement a trie with insert, search, and startsWith methods.*/
+
+        public class Trie
+        {
+            static readonly int ALPHABET_SIZE = 26;
+            class TrieNode
+            {
+                public TrieNode[] children = new TrieNode[ALPHABET_SIZE];
+                public bool isLeaf = false;
+            };
+            static TrieNode root;
+            /** Initialize your data structure here. */
+            public Trie()
+            {
+                root = new TrieNode();
+            }
+
+            /** Inserts a word into the trie. */
+            public void Insert(string word)
+            {
+                int k = word.Length;
+                TrieNode current = root;
+                int index = default;
+                for(int i = 0; i <k; i++)
+                {
+                    index = word[i] - 'a';
+                    if(current.children[index] == null)
+                    {
+                        current.children[index] = new TrieNode();                   
+                    }
+                    current = current.children[index];
+                }
+                current.isLeaf = true;
+            }
+
+            /** Returns if the word is in the trie. */
+            public bool Search(string word)
+            {
+                int k = word.Length;
+                TrieNode current = root;
+                int index = default;
+                for (int i = 0; i < k; i++)
+                {
+                    index = word[i] - 'a';
+                    if (current.children[index] == null)
+                    {
+                        return false;
+                    }
+                    current = current.children[index];
+                }
+                return current != null && current.isLeaf;
+            }
+
+            /** Returns if there is any word in the trie that starts with the given prefix. */
+            public bool StartsWith(string prefix)
+            {
+                int k = prefix.Length;
+                TrieNode current = root;
+                int index = default;
+                for (int i = 0; i < k; i++)
+                {
+                    index = prefix[i] - 'a';
+                    if (current.children[index] == null)
+                    {
+                        return false;
+                    }
+                    current = current.children[index];
+                }
+                return current != null;
+            }
+        }
+
+        /**
+         * Your Trie object will be instantiated and called as such:
+         * Trie obj = new Trie();
+         * obj.Insert(word);
+         * bool param_2 = obj.Search(word);
+         * bool param_3 = obj.StartsWith(prefix);
+         */
     }
 }
